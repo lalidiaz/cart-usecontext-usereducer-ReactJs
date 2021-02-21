@@ -7,8 +7,9 @@ Topic:
 • useContext() and useReducer() hooks, contextAPI, fetch data with useReducer().
 
 
-https://cart-usereducer-usecontext.vercel.app/
+https://cart-usereducer-usecontext-lalidiaz.vercel.app/
 
 
-![Screen Shot 2021-02-21 at 6 24 54 PM](https://user-images.githubusercontent.com/60779542/108628273-6d5ffb80-7473-11eb-9cfc-339c2ee80611.png)
-![Screen Shot 2021-02-21 at 6 25 07 PM](https://user-images.githubusercontent.com/60779542/108628275-6df89200-7473-11eb-9b30-1ff93098a531.png)
+![cart](https://user-images.githubusercontent.com/60779542/108630001-1c083a00-747c-11eb-9041-c997e0b5dfe4.png)
+![cart2](https://user-images.githubusercontent.com/60779542/108630002-1ca0d080-747c-11eb-9f60-37aa7b5608e5.png)
+
