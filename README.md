@@ -4,4 +4,4 @@ This is the 14th project to refresh ReactJs concepts. I am writing an article ab
 
 Topic:
 
-• useContext() and useReducer() hooks, contextAPI.
+• useContext() and useReducer() hooks, contextAPI, fetch data with useReducer().

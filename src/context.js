@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useContext,
-  useReducer,
-  useEffect,
-  createContext
-} from 'react';
+import React, { useContext, useReducer, useEffect, createContext } from 'react';
 import cartItems from './data';
 import reducer from './reducer';
 
@@ -36,6 +30,27 @@ const AppProvider = ({ children }) => {
   const decrease = (id) => {
     dispatch({ type: 'DECREASE', payload: id });
   };
+
+  useEffect(() => {
+    dispatch({ type: 'GET_TOTALS' });
+  }, [state.cart]);
+
+  const fetchData = async () => {
+    dispatch({ type: 'LOADING' });
+    const res = await fetch(url);
+    const cart = await res.json();
+
+    dispatch({ type: 'DISPLAY_ITEMS', payload: cart });
+  };
+
+  const toggleAmount = (id, type) => {
+    dispatch({ type: 'TOGGLE_AMOUNT', payload: { id, type } });
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <AppContext.Provider
       value={{
@@ -43,7 +58,8 @@ const AppProvider = ({ children }) => {
         clearCart,
         remove,
         increase,
-        decrease
+        decrease,
+        toggleAmount
       }}
     >
       {children}
