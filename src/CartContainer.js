@@ -3,8 +3,7 @@ import CartItem from './CartItem';
 import { useGlobalContext } from './context';
 import { FcHighPriority, FcFullTrash } from 'react-icons/fc';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
-import sale from './assets/sale.png';
-import shop from './assets/shop.png';
+
 
 const CartContainer = () => {
   const { cart, total, clearCart } = useGlobalContext();
