@@ -6,7 +6,7 @@ import React, {
   createContext
 } from 'react';
 import cartItems from './data';
-import reducer from './reducer';
+// import reducer from './reducer';
 
 const url = 'https://course-api.com/react-useReducer-cart-project';
 const AppContext = createContext();
