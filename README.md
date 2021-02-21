@@ -1,7 +1,7 @@
 # cart-usecontext-usereducer-ReactJs
 
 This is the 14th project to refresh ReactJs concepts. I am writing an article about ReactJs main concepts so I can share it with the community once it's finished.
-This is a shopping cart, the price would increase or decrease if you add or remove items. Also, you can clear the list.
+This is a shopping cart, the price and number of items would increase if you add products to your cart and if you remove items, would decrease the number of items and price. You can also clear the list if you want to.
 Topic:
 
 • useContext() and useReducer() hooks, contextAPI, fetch data with useReducer().
