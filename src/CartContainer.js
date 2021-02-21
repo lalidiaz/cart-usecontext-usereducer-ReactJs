@@ -3,6 +3,8 @@ import CartItem from './CartItem';
 import { useGlobalContext } from './context';
 import { FcHighPriority, FcFullTrash } from 'react-icons/fc';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
+import sale from './assets/sale.png';
+import shop from './assets/shop.png';
 
 const CartContainer = () => {
   const { cart, total, clearCart } = useGlobalContext();
@@ -22,19 +24,18 @@ const CartContainer = () => {
   }
   return (
     <section className="cart">
-      {/* cart header */}
       <header>
         <h2>
           your cart <AiOutlineShoppingCart />
         </h2>
       </header>
-      {/* cart items */}
+
       <div>
         {cart.map((item) => {
           return <CartItem key={item.id} {...item} />;
         })}
       </div>
-      {/* cart footer */}
+
       <footer>
         <hr />
         <div className="cart-total">

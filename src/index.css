@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Nanum+Gothic:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700;900&display=swap');
 
 :root {
   --clr-white: #fff;
@@ -19,28 +17,14 @@
   box-sizing: border-box;
 }
 body {
-  font-family: 'Comfortaa', cursive;
-  background: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
   color: black;
   line-height: 1.5;
   font-size: 18px;
   height: 100%;
   width: 100%;
-  background-image: linear-gradient(
-    to right top,
-    #6dd4c8,
-    #74d5c8,
-    #7bd6c8,
-    #81d7c8,
-    #87d8c8,
-    #90dbcc,
-    #98ddd0,
-    #a1e0d4,
-    #aee5dc,
-    #bceae4,
-    #caefeb,
-    #d8f4f2
-  );
+  background: #f3f6ff;
+  color: #42427d;
 }
 a {
   text-decoration: none;
@@ -102,7 +86,6 @@ Navbar
   margin-top: 2rem;
 }
 nav {
-  background: #f8f8f8;
   padding: 1.25rem 2rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -115,7 +98,6 @@ nav {
   align-items: center;
 }
 nav h3 {
-  color: black;
   margin-bottom: 0;
 }
 .nav-container {
@@ -124,7 +106,7 @@ nav h3 {
 }
 nav svg {
   width: 2rem;
-  fill: black;
+  fill: #42427d;
 }
 .amount-container {
   position: absolute;
@@ -148,16 +130,20 @@ nav svg {
 Cart
 ===============
 */
+
 .cart {
-  width: 100%;
+  width: 60%;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
   padding: 20px;
-  max-width: 800px;
-  background-color: #f8f8f8;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
   border-radius: 10px;
+}
+
+.shop-img {
+  width: 600px;
+  height: auto;
 }
 .cart h2 {
   text-transform: uppercase;
@@ -217,7 +203,7 @@ Cart Item
   font-size: 18px;
 }
 .item-price {
-  color: green;
+  font-weight: 900;
 }
 .remove-btn {
   color: #d32f2f;
@@ -256,4 +242,15 @@ hr {
   background: gray;
   border-color: transparent;
   border-width: 0.25px;
+}
+
+@media screen and (max-width: 480px) {
+  .cart {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart {
+    width: 100%;
+  }
 }
