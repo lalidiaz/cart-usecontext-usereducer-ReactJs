@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Nanum+Gothic:wght@400;700&display=swap');
+
+:root {
+  --clr-white: #fff;
+  --clr-red-dark: hsl(360, 67%, 44%);
+  --clr-red-light: hsl(360, 71%, 66%);
+  --transition: all 0.3s linear;
+  --spacing: 0.25rem;
+  --radius: 0.25rem;
+  --large-screen-width: 1170px;
+  --small-screen-width: 90vw;
+  --fixed-width: 50rem;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Comfortaa', cursive;
+  background: #f8f8f8;
+  color: black;
+  line-height: 1.5;
+  font-size: 18px;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to right top,
+    #6dd4c8,
+    #74d5c8,
+    #7bd6c8,
+    #81d7c8,
+    #87d8c8,
+    #90dbcc,
+    #98ddd0,
+    #a1e0d4,
+    #aee5dc,
+    #bceae4,
+    #caefeb,
+    #d8f4f2
+  );
+}
+a {
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  display: block;
+}
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 18px;
+}
+p {
+  margin-bottom: 10px;
+}
+
+.btn {
+  text-transform: uppercase;
+  background: tomato;
+  color: var(--clr-white);
+  padding: 10px;
+  display: inline-block;
+  font-weight: 700;
+  transition: var(--transition);
+  font-size: 0.875rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+.loading {
+  text-align: center;
+  margin-top: 2rem;
+}
+nav {
+  background: #f8f8f8;
+  padding: 1.25rem 2rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+.nav-center {
+  max-width: var(--fixed-width);
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav h3 {
+  color: black;
+  margin-bottom: 0;
+}
+.nav-container {
+  display: block;
+  position: relative;
+}
+nav svg {
+  width: 2rem;
+  fill: black;
+}
+.amount-container {
+  position: absolute;
+  top: -0.85rem;
+  right: -0.85rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  background: tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.total-amount {
+  color: white;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+/*
+=============== 
+Cart
+===============
+*/
+.cart {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  max-width: 800px;
+  background-color: #f8f8f8;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.cart h2 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.empty-cart {
+  text-transform: lowercase;
+  color: gray;
+  margin-top: 20px;
+  text-align: center;
+}
+.cart footer {
+  margin-top: 2rem;
+  text-align: center;
+}
+.cart-total h4 {
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.clear-btn {
+  background: transparent;
+  padding: 10px;
+  color: var(--clr-red-dark);
+  border: 1px solid var(--clr-red-dark);
+  margin-top: 10px;
+  border-radius: var(--radius);
+}
+.clear-btn:hover {
+  background: var(--clr-red-light);
+  color: var(--clr-red-dark);
+  border-color: var(--clr-red-light);
+}
+/*
+=============== 
+Cart Item
+===============
+*/
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+}
+.cart-item h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 18px;
+}
+.item-price {
+  color: green;
+}
+.remove-btn {
+  color: #d32f2f;
+  letter-spacing: var(--spacing);
+  cursor: pointer;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  margin-top: 0.375rem;
+  transition: var(--transition);
+}
+.remove-btn:hover {
+  color: var(--clr-primary-light);
+}
+.amount-btn {
+  width: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  outline: transparent;
+  justify-content: center;
+  display: flex;
+}
+
+.amount-btn:hover {
+  color: #448aff;
+}
+.amount {
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  line-height: 1;
+}
+hr {
+  background: gray;
+  border-color: transparent;
+  border-width: 0.25px;
+}

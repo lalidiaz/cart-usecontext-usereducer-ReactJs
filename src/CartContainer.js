@@ -1,6 +1,8 @@
 import React from 'react';
 import CartItem from './CartItem';
 import { useGlobalContext } from './context';
+import { FcHighPriority, FcFullTrash } from 'react-icons/fc';
+import { AiOutlineShoppingCart } from 'react-icons/ai';
 
 const CartContainer = () => {
   const { cart, total, clearCart } = useGlobalContext();
@@ -10,7 +12,9 @@ const CartContainer = () => {
       <section className="cart">
         {/* cart header */}
         <header>
-          <h2>your bag</h2>
+          <h2>
+            Your cart <FcHighPriority />
+          </h2>
           <h4 className="empty-cart">is currently empty</h4>
         </header>
       </section>
@@ -20,7 +24,9 @@ const CartContainer = () => {
     <section className="cart">
       {/* cart header */}
       <header>
-        <h2>your bag</h2>
+        <h2>
+          your cart <AiOutlineShoppingCart />
+        </h2>
       </header>
       {/* cart items */}
       <div>
@@ -37,7 +43,7 @@ const CartContainer = () => {
           </h4>
         </div>
         <button className="btn clear-btn" onClick={clearCart}>
-          clear cart
+          clear cart <FcFullTrash />
         </button>
       </footer>
     </section>
